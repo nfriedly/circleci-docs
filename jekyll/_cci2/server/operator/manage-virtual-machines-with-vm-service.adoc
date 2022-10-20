@@ -11,7 +11,7 @@ version:
 :toc: macro
 :toc-title:
 
-VM service controls how https://circleci.com/docs/2.0/configuration-reference/#machine[`machine`] executor and https://circleci.com/docs/2.0/building-docker-images[Remote Docker] jobs are run.
+VM service provisions a new VM for each https://circleci.com/docs/2.0/configuration-reference/#machine[`machine`] executor and https://circleci.com/docs/2.0/building-docker-images[Remote Docker] job.
 
 This section describes the available configuration options for VM service. Refer to the default `values.yaml` file for details on how to pre-scale virtual machines.
 
@@ -29,7 +29,7 @@ The following configuration options are for the VM provider: either AWS or GCP.
 
 [#aws]
 === AWS
-You will need to add a section to your `values.yaml` file to configure VM Service to work with AWS EC2. 
+You will need to add a section to your `values.yaml` file to configure VM Service to work with AWS EC2.
 
 [#aws-authentication]
 ==== Authentication
@@ -42,7 +42,7 @@ One of the following options is required:
 NOTE: The Access Key and Secret Key used by VM Service differs from the policy used by object storage in the previous section.
 
 * Or, select "IAM role" and provide:
-** *Role ARN* (required): 
+** *Role ARN* (required):
 +
 https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html[Role ARN for Service Accounts] (Amazon Resource Name) for EC2 access.
 
@@ -76,13 +76,13 @@ The default AMIs for server v4.x are based on Ubuntu 22.04.
 | Region
 | AMI
 
-| `us-east-1` 
+| `us-east-1`
 | `ami-03dc54f7559144972`
 
 | `ca-central-1`
 | `ami-0575d605472840942`
 
-| `ap-south-1` 
+| `ap-south-1`
 | `ami-047ef6196620f56ca`
 
 | `ap-southeast-2`
@@ -103,7 +103,7 @@ The default AMIs for server v4.x are based on Ubuntu 22.04.
 | `sa-east-1`
 | `ami-064b0bfe97e6ec04c`
 
-| `us-east-2` 
+| `us-east-2`
 | `ami-068cb131f91632f12`
 
 | `us-west-1`
@@ -124,13 +124,13 @@ The default AMIs for server v4.x are based on Ubuntu 22.04.
 | `us-gov-east-1`
 | `ami-0de525cac9ac9bea8`
 
-| `us-gov-west-1` 
+| `us-gov-west-1`
 | `ami-02abf947586cae56b`
 |===
 
 [#gcp]
 === GCP
-You will need to add a section to your `values.yaml` file to configure VM Service to work with Google Cloud Platform (GCP). 
+You will need to add a section to your `values.yaml` file to configure VM Service to work with Google Cloud Platform (GCP).
 
 [#gcp-authentication]
 ==== Authentication
